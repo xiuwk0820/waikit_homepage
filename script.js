@@ -11,9 +11,16 @@ const setTheme = (isDark) => {
   }
 };
 
-// The portfolio is designed to open in its signature blush light theme.
-// Visitors can still opt into the dark theme with the switch below.
-setTheme(false);
+let savedTheme = null;
+
+try {
+  savedTheme = window.localStorage?.getItem("theme");
+} catch {
+  // Theme selection still works when browser storage is unavailable.
+}
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+setTheme(savedTheme ? savedTheme === "dark" : prefersDark);
 
 themeSwitch?.addEventListener("click", () => {
   const isDark = !document.body.classList.contains("dark-mode");

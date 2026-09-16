@@ -162,7 +162,7 @@ p {
   align-items: center;
   width: 104px;
   height: 38px;
-  margin: 14px auto 0;
+  margin: 0;
   padding: 3px;
   border: 1px solid var(--border);
   border-radius: 999px;
@@ -171,6 +171,8 @@ p {
   cursor: pointer;
   overflow: hidden;
 }
+
+.section-heading-row{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}.section-heading-row .section-label{margin-bottom:14px}.section-heading-row .theme-switch{margin-top:-5px;flex:0 0 auto}
 
 .theme-switch:hover {
   background: #e4eef8;

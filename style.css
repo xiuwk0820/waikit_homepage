@@ -496,14 +496,14 @@ p {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 18px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
 }
 
 .skill-card {
-  min-height: 178px;
-  padding: 20px 18px 18px;
+  min-height: 142px;
+  padding: 15px 12px 13px;
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 16px;
@@ -523,63 +523,47 @@ p {
 }
 
 .skill-icon {
-  width: 46px;
-  height: 46px;
+  width: 38px;
+  height: 38px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 15px;
-  border-radius: 14px;
+  margin-bottom: 10px;
+  border-radius: 11px;
   background: linear-gradient(135deg, #edf5fc, #d6e7f7);
   color: #275f99;
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 1rem;
+  font-size: 1.15rem;
   font-weight: 800;
   line-height: 1;
-  letter-spacing: -0.06em;
+  letter-spacing: 0;
 }
 
-.skill-icon--cpp,
-.skill-icon--devops {
-  background: linear-gradient(135deg, #f0edfc, #dfd8f7);
-  color: #5d4aa4;
+.skill-icon img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
-.skill-icon--torch,
 .skill-icon--ai {
   background: linear-gradient(135deg, #fdf0ec, #f9d9cf);
   color: #bf563d;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.45rem;
-  letter-spacing: 0;
-}
-
-.skill-icon--linux,
-.skill-icon--ros {
-  background: linear-gradient(135deg, #edf7f1, #d7ebdf);
-  color: #2f7b57;
-  font-size: 1.12rem;
-  letter-spacing: -0.12em;
-}
-
-.skill-icon--docker,
-.skill-icon--git {
-  background: linear-gradient(135deg, #eef3f8, #dae4f0);
-  color: #46698d;
   font-size: 1.2rem;
   letter-spacing: 0;
 }
 
 .skill-card h3 {
-  font-size: 1.15rem;
-  margin-bottom: 5px;
+  font-size: 1rem;
+  margin-bottom: 3px;
   line-height: 1.25;
 }
 
 .skill-card p {
   color: var(--muted);
-  font-size: 0.88rem;
-  line-height: 1.5;
+  font-size: 0.78rem;
+  line-height: 1.4;
 }
 
 .page-footer {
@@ -616,7 +600,7 @@ p {
   }
 
   .skills-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .publication-stack {
@@ -647,6 +631,6 @@ p {
   }
 
   .skills-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }

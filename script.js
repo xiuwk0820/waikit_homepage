@@ -1,18 +1,13 @@
 const yearNode = document.querySelector("#year");
-const themeToggle = document.querySelector(".theme-toggle");
-const themeGlyph = document.querySelector(".theme-glyph");
+const themeSwitch = document.querySelector(".theme-switch");
 
 const setTheme = (isDark) => {
   document.body.classList.toggle("dark-mode", isDark);
 
-  if (themeToggle) {
-    themeToggle.setAttribute("aria-pressed", String(isDark));
-    themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
-    themeToggle.setAttribute("title", isDark ? "Switch to light mode" : "Switch to dark mode");
-  }
-
-  if (themeGlyph) {
-    themeGlyph.textContent = isDark ? "☾" : "☀";
+  if (themeSwitch) {
+    themeSwitch.setAttribute("aria-checked", String(isDark));
+    themeSwitch.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+    themeSwitch.setAttribute("title", isDark ? "Switch to light mode" : "Switch to dark mode");
   }
 };
 
@@ -27,7 +22,7 @@ const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
 setTheme(savedTheme ? savedTheme === "dark" : prefersDark);
 
-themeToggle?.addEventListener("click", () => {
+themeSwitch?.addEventListener("click", () => {
   const isDark = !document.body.classList.contains("dark-mode");
   setTheme(isDark);
 

@@ -554,6 +554,20 @@ p {
   letter-spacing: 0;
 }
 
+.skill-icon--system {
+  background: linear-gradient(135deg, #edf7f1, #d7ebdf);
+  color: #2f7b57;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.35rem;
+}
+
+.skill-icon--gpu {
+  background: linear-gradient(135deg, #ecf7ef, #d5eddb);
+  color: #3a8052;
+  font-size: 0.64rem;
+  letter-spacing: -0.04em;
+}
+
 .skill-card h3 {
   font-size: 1rem;
   margin-bottom: 3px;

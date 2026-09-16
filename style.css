@@ -9,7 +9,7 @@
   --accent: #2f6fb3;
   --accent-soft: #eff5fb;
   --shadow: 0 12px 28px rgba(15, 23, 42, 0.05);
-  --max-width: 1240px;
+  --max-width: 1600px;
 }
 
 body.dark-mode {
@@ -70,11 +70,11 @@ p {
 }
 
 .layout {
-  width: min(calc(100% - 40px), var(--max-width));
+  width: min(calc(100% - 48px), var(--max-width));
   margin: 36px auto;
   display: grid;
-  grid-template-columns: 310px minmax(0, 1fr);
-  gap: 36px;
+  grid-template-columns: clamp(240px, 20vw, 320px) minmax(0, 1fr);
+  gap: clamp(28px, 3vw, 48px);
   align-items: start;
 }
 
@@ -84,11 +84,7 @@ p {
 }
 
 .profile-card {
-  padding: 28px;
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  box-shadow: var(--shadow);
+  padding: 8px 0 0;
   text-align: center;
 }
 
@@ -672,7 +668,7 @@ body.dark-mode .theme-icon--moon {
   }
 
   .profile-card {
-    padding: 22px;
+    padding-top: 0;
   }
 
   #about h2 {

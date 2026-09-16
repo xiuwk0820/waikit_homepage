@@ -172,7 +172,7 @@ p {
   overflow: hidden;
 }
 
-.section-heading-row{display:flex;align-items:flex-start;justify-content:space-between;gap:20px}.section-heading-row .section-label{margin-bottom:14px}.section-heading-row .theme-switch{margin-top:-5px;flex:0 0 auto}
+.theme-switch-row{display:flex;justify-content:center;margin-top:26px}.theme-switch{width:82px;height:32px}.theme-switch-knob{width:24px;height:24px}.theme-switch-option{font-size:13px}body.dark-mode .theme-switch-knob{transform:translateX(52px)}
 
 .theme-switch:hover {
   background: #e4eef8;

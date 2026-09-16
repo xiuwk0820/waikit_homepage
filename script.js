@@ -1,4 +1,37 @@
 const yearNode = document.querySelector("#year");
+const themeToggle = document.querySelector(".theme-toggle");
+
+const setTheme = (isDark) => {
+  document.body.classList.toggle("dark-mode", isDark);
+
+  if (themeToggle) {
+    themeToggle.setAttribute("aria-pressed", String(isDark));
+    themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+    themeToggle.setAttribute("title", isDark ? "Switch to light mode" : "Switch to dark mode");
+  }
+};
+
+let savedTheme = null;
+
+try {
+  savedTheme = window.localStorage?.getItem("theme");
+} catch {
+  // Theme selection still works when browser storage is unavailable.
+}
+const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+setTheme(savedTheme ? savedTheme === "dark" : prefersDark);
+
+themeToggle?.addEventListener("click", () => {
+  const isDark = !document.body.classList.contains("dark-mode");
+  setTheme(isDark);
+
+  try {
+    window.localStorage?.setItem("theme", isDark ? "dark" : "light");
+  } catch {
+    // Keep the selected theme for the current session without persistence.
+  }
+});
 
 if (yearNode) {
   yearNode.textContent = new Date().getFullYear();

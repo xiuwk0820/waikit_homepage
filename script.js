@@ -1,5 +1,6 @@
 const yearNode = document.querySelector("#year");
 const themeToggle = document.querySelector(".theme-toggle");
+const themeGlyph = document.querySelector(".theme-glyph");
 
 const setTheme = (isDark) => {
   document.body.classList.toggle("dark-mode", isDark);
@@ -8,6 +9,10 @@ const setTheme = (isDark) => {
     themeToggle.setAttribute("aria-pressed", String(isDark));
     themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
     themeToggle.setAttribute("title", isDark ? "Switch to light mode" : "Switch to dark mode");
+  }
+
+  if (themeGlyph) {
+    themeGlyph.textContent = isDark ? "☾" : "☀";
   }
 };
 

@@ -177,22 +177,10 @@ body.dark-mode .theme-toggle:hover {
   background: #27445f;
 }
 
-.theme-icon {
-  width: 18px;
-  height: 18px;
-  fill: currentColor;
-}
-
-.theme-icon--moon {
-  display: none;
-}
-
-body.dark-mode .theme-icon--sun {
-  display: none;
-}
-
-body.dark-mode .theme-icon--moon {
-  display: block;
+.theme-glyph {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1;
 }
 
 .profile-links a svg {

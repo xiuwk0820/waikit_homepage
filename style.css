@@ -115,6 +115,7 @@ p {
   margin-top: 12px;
   color: var(--muted);
   font-size: 0.98rem;
+  text-align: left;
 }
 
 .profile-meta,
@@ -159,9 +160,9 @@ p {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
-  width: 92px;
+  width: 104px;
   height: 38px;
-  margin-top: 14px;
+  margin: 14px auto 0;
   padding: 3px;
   border: 1px solid var(--border);
   border-radius: 999px;
@@ -202,7 +203,7 @@ body.dark-mode .theme-switch:hover {
 }
 
 body.dark-mode .theme-switch-knob {
-  transform: translateX(54px);
+  transform: translateX(68px);
 }
 
 .profile-links a svg {
